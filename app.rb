@@ -12,7 +12,9 @@ require_relative 'config/environment'
 
     post "/puppy" do
       @puppy = Puppy.new(params)
-
+      @name = @puppy.name
+      @breed = @puppy.breed
+      @months_old = @puppy.months_old
       erb :display_puppy
     end
 
