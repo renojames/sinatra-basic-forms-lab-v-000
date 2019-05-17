@@ -11,6 +11,7 @@ require_relative 'config/environment'
     end
 
     post "/puppy" do
+      @puppy = Puppy.new(params)
 
       erb :display_puppy
     end
